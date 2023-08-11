@@ -1,0 +1,23 @@
+class Solution {
+public:
+    vector<string> findWords(vector<string>& words) {
+        vector<string> ans;
+        string row1 = "qwertyuiop",row2 = "asdfghjkl",row3 = "zxcvbnm";
+        for (int i = 0; i < words.size(); i++) {
+            string temp = words[i];
+            int tp = temp.size(),cnt1 = 0, cnt2 = 0, cnt3 = 0;
+            for (int ind = 0; ind < tp; ind++) {
+                char ch = tolower(temp[ind]);
+                if (row1.find(ch) != string::npos) cnt1++;
+                if (row2.find(ch) != string::npos) cnt2++;
+                if (row3.find(ch) != string::npos) cnt3++;
+            }
+            if ((cnt1 > 0 && cnt2 == 0 && cnt3 == 0) || 
+                (cnt1 == 0 && cnt2 > 0 && cnt3 == 0) || 
+                (cnt1 == 0 && cnt2 == 0 && cnt3 > 0)) {
+                ans.push_back(temp);
+            }
+        }
+        return ans;
+    }
+};
