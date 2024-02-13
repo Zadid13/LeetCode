@@ -2,33 +2,30 @@ using System;
 
 public class MyClass
 {
-    
-    private string books;
-    private int goals;
+    private string book;
+    private int goal;
 
-    public string Name
+    public string Book
     {
-        get { return books; }
-        set { books = value; }
+        get { return this.book; }
+        set { this.book = value; }
     }
 
-    public int goals
+    public int Goal
     {
-        get { return goals; }
-        set { goals = value; }
+        get { return this.goal; }
+        set { this.goal = value; }
     }
 
-    
-    public MyClass(string books, int goals)
+    public MyClass(string book, int goal)
     {
-        Book = books;
-        Goal = goals;
+        this.Book = book;
+        this.Goal = goal;
     }
 
-    
     public void PrintProperties()
     {
-        Console.WriteLine("Book Name: {Book}, Goal: {Goal}");
+        Console.WriteLine("Book Name: " + this.Book + ", Goal: " + this.Goal);
     }
 }
 
@@ -36,10 +33,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        
-        MyClass myLab1 = new MyLab2("Pride and Prejudice by Zadid", 3);
-
-        
+        MyClass myLab1 = new MyClass("Pride and Prejudice by Zadid", 3);
         myLab1.PrintProperties();
     }
 }
