@@ -3,8 +3,20 @@ using System;
 public class MyClass
 {
     // Properties
-    public string Name { get; set; }
-    public int Age { get; set; }
+    private string _name;
+    private int _age;
+
+    public string Name
+    {
+        get { return _name; }
+        set { _name = value; }
+    }
+
+    public int Age
+    {
+        get { return _age; }
+        set { _age = value; }
+    }
 
     // Constructor
     public MyClass(string name, int age)
