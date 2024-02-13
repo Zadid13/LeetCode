@@ -2,33 +2,33 @@ using System;
 
 public class MyClass
 {
-    // Properties
-    private string _name;
-    private int _age;
+    
+    private string books;
+    private int goals;
 
     public string Name
     {
-        get { return _name; }
-        set { _name = value; }
+        get { return books; }
+        set { books = value; }
     }
 
-    public int Age
+    public int goals
     {
-        get { return _age; }
-        set { _age = value; }
+        get { return goals; }
+        set { goals = value; }
     }
 
-    // Constructor
-    public MyClass(string name, int age)
+    
+    public MyClass(string books, int goals)
     {
-        Name = name;
-        Age = age;
+        Book = books;
+        Goal = goals;
     }
 
-    // Method to print properties
+    
     public void PrintProperties()
     {
-        Console.WriteLine($"Name: {Name}, Age: {Age}");
+        Console.WriteLine("Book Name: {Book}, Goal: {Goal}");
     }
 }
 
@@ -36,10 +36,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Create an instance of MyClass
-        MyClass myObject = new MyClass("John", 25);
+        
+        MyClass myLab1 = new MyLab2("Pride and Prejudice by Zadid", 3);
 
-        // Call the PrintProperties method to print the properties
-        myObject.PrintProperties();
+        
+        myLab1.PrintProperties();
     }
 }
